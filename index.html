@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="license" href="https://www.opensource.org/licenses/mit-license/">
+  <title>Form</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+
+</head>
+<br><br><br><br><br>
+<body>
+  <div class="header">
+    <div id="gondericibilgi">
+      <table class="gondericibilgitable">
+        <tr>
+          <td>Adres:</td>
+          <td><input type="text" name="sirketadres" >
+          </td>
+        </tr>
+        <tr>
+          <td>İl/İlçe:</td>
+          <td><input type="text" name="sehir"  >
+          </td>
+        </tr>
+        <tr>
+          <td>Tel:</td>
+          <td><input type="text" pattern="\d*" name="tel"  >
+          </td>
+        </tr>
+        <tr>
+          <td>Web:</td>
+          <td><input type="text" name="web"  >
+          </td>
+        </tr>
+        <tr>
+          <td>E-Posta:</td>
+          <td><input type="email" name="mail"  >
+          </td>
+        </tr>
+        <tr>
+          <td>Vergi Dairesi:</td>
+          <td><input type="text" name="vergid" >
+          </td>
+        </tr>
+        <tr>
+          <td>VKN:</td>
+          <td><input type="text" pattern="\d*" name="vkn"  >
+          </td>
+        </tr>
+        <tr>
+          <td>MUSTERINO:</td>
+          <td><input type="text" pattern="\d*" name="musno"  >
+          </td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="logo2">
+      <img src="logo.png" alt="logo"><br>
+      <font size="5"> <center> <b>  E-Arşiv Fatura  </b>  </center> </font>
+    </div>
+    
+    <div id="logo1">
+      <img src="kolaysoft.png" alt="kolaysoft">
+    </div>
+
+    <hr size="5" width="30%" align="left" color="black">
+    <hr size="1" width="30%" align="left" color="black">
+    <hr size="5" width="30%" align="left" color="black">
+
+    <div id="body">
+      <div class="alicidiv" style="width: 50%;">
+        <table class="alici">
+          <b>SAYIN</b> <br><br>
+          <form>
+            <input style="width: 98%;" class="input" type="text" id="name" name="name" placeholder="Ad Soyad"> <br>
+            <input style="width: 98%;" class="input" type="text" id="name" name="name" placeholder="İl/İlçe"> <br>
+            <input style="width: 98%;" class="input" type="text" id="name" name="name" placeholder="Ülke"> <br>
+            <input style="width: 98%;" class="input" type="text" id="name" name="name" placeholder="Vergi Dairesi"> <br>
+            <input style="width: 98%;" class="input" type="text" id="name" name="name" placeholder="TCKN"> <br>
+          </form>
+        </table><br>
+      </div>
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      &nbsp;
+      <div class="faturabilgidiv">
+        <table class="faturabilgitable">
+          <tr>
+            <th>Özelleştirme No:</th>
+            <td> <input type="text" id="özelno" ></td>
+          </tr>
+          <tr>
+            <th>Senaryo Türü</th>
+            <td><select name="senaryotürü">
+                <option value="senaryo">Temel Fatura
+                <option>Ticari Fatura
+                <option>Yolcu Beraber Fatura
+                <option>HKS
+                <option>Kamu
+              </select></td>
+          </tr>
+          <tr>
+            <th style="text-align:right">Fatura Tipi</th>
+            <td>
+              <select name="faturatip">
+                <option value="faturatip">Satış
+                <option>İade
+                <option>Tevkifat
+                <option>İstisna
+                <option>Özel Matrah
+                <option>İhraç Kayıtlı
+                <option>SGK
+                <option>Tevkifat İade
+              </select>
+          <tr>
+          <tr>
+            <th>Fatura No:</th>
+            <td><input type="text" class="faturano" > </td>
+          </tr>
+          <tr>
+            <th>Fatura Tarihi</th>
+            <td><input type="datetime-local" ></td>
+          </tr>
+        </table>
+      </div>
+      <br><br><br><br>
+
+      <div class="hesap">
+        <table class="hesaptable" style="width: 100%;">
+          <tr>
+            <th><span>Sıra No</span></th>
+            <th><span>Mal Hizmet</span></th>
+            <th><span>Miktar</span></th>
+            <th><span>Birim Fiyat</span></th>
+            <th><span>KDV Oranı</span></th>
+            <th><span>KDV Tutarı</span></th>
+            <th><span>Diğer Vergiler</span></th>
+            <th><span>Mal Hizmet Tutarı</span></th>
+          </tr>
+          <tbody>
+            <tr>
+              <td><span><input name="sirano" type="text" maxlength="10" style="width: 75px;border: none"></span></td>
+              <td><span><input name="malhizmet" type="text" maxlength="10" style="width: 75px;border: none"></span></td>
+              <td><span><input name="miktar" type="text" maxlength="10" style="width: 75px;border: none"></span></td>
+              <td><span><input name="birimfiyat" type="text" maxlength="10" style="width: 75px;border: none"></span>
+              </td>
+              <td><span><input name="kdvorani" type="text" maxlength="10" style="width: 75px;border: none"></span></td>
+              <td><span><input name="kdvtutari" type="text" maxlength="10" style="width: 75px;border: none"></span></td>
+              <td><span><input name="digervergiler" type="text" maxlength="10" style="width: 75px;border: none"></span>
+              </td>
+              <td><span><input name="malhizmettutari" type="text" maxlength="10"
+                    style="width: 120px;border: none"></span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+<br><br>
+      <div class="faturagoruntu">
+        <table class="faturagoruntutable" align="right">
+          <tr>
+            <th style="text-align:right">Mal Hizmet Toplam Tutarı</th>
+            <td><input type="text" name="malhizmet"></td>
+        </tr>
+        <tr>
+            <th style="text-align:right">Toplam İskonto</th>
+            <td><input type="text" name="iskonto"></td>
+        </tr>
+        <tr>
+            <th style="text-align:right">Mal Hizmet Toplam Tutarı</th>
+            <td><input type="text" name="malhizmet"></td>
+        </tr>
+        <tr>
+            <th style="text-align:right">Hesaplanan GERÇEK USÜLDE KATMA DEĞER VERGİSİ(%8)</th>
+            <td><input type="text" name="kdvoran"></td>
+        </tr>
+        <tr>
+            <th style="text-align:right">Vergiler Dahil Toplam Tutar</th>
+            <td><input type="text" name="kdvtutar"></td>
+        </tr>
+        <tr>
+            <th style="text-align:right">Ödenecek Tutar</th>
+            <td><input type="text" name="malhizmettutar"></td>
+        </tr>
+        </table>
+      </div>     
+    </div>
+
+
+    <div id="footer">
+      <table class="footertable"  style="width: 100%;">
+        <tr>
+            <td colspan="12"> 
+              <b> #Yalnız YüzElli Tl#</b> 
+               <img src="qr.png" align="right" width="20%"> </td>
+        </tr>
+        <tr>
+            <td colspan="5">AKBANK/ÇAYYOLU ŞUBE</td>
+            <td colspan="7">IBAN: TR04 0004 6012 1558 8000 1622 24</td>
+        </tr>
+    </table>
+    </div>
+  </div>
+</body>
+
+</html>
+
